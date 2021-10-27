@@ -35,14 +35,7 @@ public class Model {
     public int feet;
     double hourlyrate;
 
-
-
-
-
-
-
-    public Model() { this("", "", 0, 0, false,false); }
-
+    public Model() { this("", "", 0, 0, false,false) }
 
     public Model(String firstName,String lastName, int heightInches, double weightPounds, boolean canTravel, boolean smoker)
     {
@@ -58,7 +51,7 @@ public class Model {
         setSmoker(smoker);
     }
 
-    public Model(String firstName,String lastName, int heightInches, double weightPounds)
+    public Model(String firstName, String lastName, int heightInches, double weightPounds)
     {
         checkFirstName(firstName);
         checkLastName(lastName);
@@ -72,20 +65,6 @@ public class Model {
         setSmoker(false);
     }
 
-
-
-
-
-    /*public Model(String firstName, String lastName, int heightInches, double weightPounds, boolean canTravel, boolean smoker)
-    {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.heightInches = heightInches;
-        this.weightPounds = weightPounds;
-        this.canTravel = false;
-        this.smoker = false;
-
-    }*/
     public double calculatePayDollarsPerHour(){
         int TALL_THIN_BONUS_DOLLARS_PER_HOUR1 = ((heightInches >= TALL_INCHES) & (weightPounds < THIN_POUNDS)) ? TALL_THIN_BONUS_DOLLARS_PER_HOUR : 0;
         int TRAVEL_BONUS_DOLLARS_PER_HOUR1 = (canTravel == true) ? TRAVEL_BONUS_DOLLARS_PER_HOUR : 0;
@@ -96,18 +75,16 @@ public class Model {
 
     public int getHeightInFeetAndInches_f(){
         int dFeet = heightInches / INCHES_PER_FOOT;
-
         return dFeet;
-
     }
+
     public int getHeightInFeetAndInches_i(){
         int dinches = heightInches % INCHES_PER_FOOT;
         return dinches;
-
     }
 
 
-    public String  t() {
+    public String  t(){
             while (firstName !="") {
                 String ccanTravel = (canTravel == true) ? "Does travel" : "Does NOT travel";
                 String issmoker = (smoker == true) ? "Does smoke" : "Does NOT smoke";
@@ -124,20 +101,6 @@ public class Model {
         return "";
     }
 
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
     public String getFirstName() {
         return firstName;
             }
@@ -153,7 +116,7 @@ public class Model {
 
     public final void setLastName(String lastName) {
        checkFirstName(lastName);
-        this.lastName = lastName;
+       this.lastName = lastName;
     }
 
     public int getHeightInches() { return heightInches; }
@@ -173,14 +136,12 @@ public class Model {
     public boolean getCanTravel() { return canTravel; }
 
     public final void setCanTravel(boolean canTravel) {
-        //checkSecond(canTravel);
         this.canTravel = canTravel;
     }
 
     public boolean getSmoker() { return smoker; }
 
     public final void setSmoker(boolean smoker) {
-        //checkSecond(canTravel);
         this.smoker = smoker;
     }
 
